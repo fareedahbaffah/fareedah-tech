@@ -1,0 +1,1 @@
+# fareedah-tech
