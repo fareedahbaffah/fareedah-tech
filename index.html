@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fareedah Tech Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
+      color: #f4f4f4;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #444;
+    }
+    nav h1 {
+      color: #00ffd1;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      color: #f4f4f4;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00ffd1;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      color: #00ffd1;
+    }
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+    .products, .about, .contact {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .products h3, .about h3, .contact h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #00ffd1;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .product {
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 255, 209, 0.2);
+    }
+    .product h4 {
+      margin: 1rem 0 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #444;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Fareedah Tech Hub</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Welcome to Fareedah's Computer Parts Store</h2>
+    <p>High-performance, reliable, and futuristic computer hardware solutions.</p>
+  </section>
+
+  <section class="products" id="products">
+    <h3>Our Products</h3>
+    <div class="product-list" id="product-list">
+      <!-- Products will load here via JavaScript -->
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h3>About Me</h3>
+    <p>I am Fareedah Baffa Buhari, an ICT student at the University of Northwest University, Kano. My passion for technology and hardware inspired me to start this platform where you can find the best computer parts at affordable prices. Welcome to a space where innovation meets reliability.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h3>Contact</h3>
+    <p>Phone: 07046716936</p>
+    <p>Email: fareedah@techhub.com</p>
+    <p>Location: Kano, Nigeria</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Fareedah Tech Hub. All rights reserved.
+  </footer>
+
+  <script>
+    const products = [
+      { name: "Gaming Graphics Card", price: "$299" },
+      { name: "High-Speed SSD 1TB", price: "$109" },
+      { name: "Intel Core i9 CPU", price: "$489" },
+      { name: "16GB DDR4 RAM", price: "$89" },
+      { name: "ATX Gaming Motherboard", price: "$139" },
+      { name: "750W Modular Power Supply", price: "$99" }
+    ];
+
+    const productList = document.getElementById('product-list');
+
+    products.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product';
+      div.innerHTML = `<h4>${product.name}</h4><p>${product.price}</p>`;
+      productList.appendChild(div);
+    });
+  </script>
+</body>
+</html>
